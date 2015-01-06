@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<projects>
+	<project id = "204" name = "Folio: 204 \ Placa: 444sss" startdate = "2013,07,21" >
+		<task id="183">
+			<name>Reparación de transmición estándar</name>
+			<est>2013,07,21</est>
+			<duration>1</duration>
+			<percentcompleted>0</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="184">
+			<name>Reparación de sistema de enfriamiento</name>
+			<est>2013,07,21</est>
+			<duration>2</duration>
+			<percentcompleted>0</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="185">
+			<name>Reparación o cambio de dirección</name>
+			<est>2013,07,21</est>
+			<duration>3</duration>
+			<percentcompleted>0</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="186">
+			<name>Cambio de Boster</name>
+			<est>2013,07,21</est>
+			<duration>3</duration>
+			<percentcompleted>0</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="187">
+			<name>Reparacion de ajuste de motor</name>
+			<est>2013,07,21</est>
+			<duration>1</duration>
+			<percentcompleted>0</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+	</project>
+</projects>

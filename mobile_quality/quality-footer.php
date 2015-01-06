@@ -1,0 +1,1 @@
+<div  data-role="footer" data-position="fixed">Grupo Automotriz en Servicios de Combustibles, S.A. de C.V.</div> 	

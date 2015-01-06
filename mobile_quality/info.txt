@@ -1,0 +1,44 @@
+Flujo de trabajo del módulo de calidad:
+1.- La app se va a conectar al dominio http://mobile-quality.gascomb.com/ y pasara los siguientes parametros.
+	folios, user_id
+
+ARCHIVOS
+La aplicacion web tendra las siguientes vistas:
+	
+	quality-list.php : Vista donde se enlistas las actividades del vehiculos mismas que se van calificar por calidad
+	quality-form.php : Vista con el formulario detalle de cada actividad.
+
+QR Flujo:
+Una vez que el se a leido el código QR se mostrará la vista quality-list.php
+la cual tendrá un grid con la actividad y el status 
+--------------------------
+ ACTIVIDAD | STATUS
+ -------------------------
+ Al dar click a cualquiera de las actividades nos mandará a la vista quality-form.php
+ 
+Menu:
+Va a existir 2 secciones 
+	calidad 
+		- quality-list.php
+		- quality-form.php
+		
+	requisiciones
+		- quality-requisitions.php
+		
+BD:
+Tablas Soporte:
+	- support_checklist					Tabla relacional para generar los formularios		
+	- support_checklist_activities		Listado de actividades por realizar
+	- support_checklist_mechanical		Listado de pruebas mecanicas
+	- support_checklist_onroad			Listado de pruebas en pista
+	- support_checklist_physical		Listado de pruebas en fisicas
+	
+Tablas Checklist
+	- checklist_folio					Tabla relacional checklist con folio
+	- checklist_details					Tabla con resultados del formularios
+
+	
+
+	
+	
+	
