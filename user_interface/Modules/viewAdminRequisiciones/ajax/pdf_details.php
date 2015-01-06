@@ -1,6 +1,6 @@
 <?php
-
-include_once '/home/gascomb/develop_html/modules/classes/class.inventory_control_pdf.php';
+include '/home/gascomb/secure_html/config/set_variables.php';
+include_once (PATH_CLASSES_FOLDER.'class.inventory_control_pdf.php');
 
 $PDF = new Services_PDF('28866');
 $PDF->creaPDF();
