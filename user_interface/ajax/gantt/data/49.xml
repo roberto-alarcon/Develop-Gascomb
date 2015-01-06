@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<projects>
+	<project id = "49" name = "Folio: 49 \ Placa: 123-RTY" startdate = "2013,03,26" >
+		<task id="1">
+			<name>Reemplazar motor básico</name>
+			<est>2013,03,26</est>
+			<duration>20</duration>
+			<percentcompleted>70</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="2">
+			<name>Reemplazar polea de cigüeñal</name>
+			<est>2013,03,26</est>
+			<duration>5</duration>
+			<percentcompleted>100</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="3">
+			<name>Reemplazar junta tapa de punterías</name>
+			<est>2013,03,26</est>
+			<duration>4</duration>
+			<percentcompleted>100</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="12">
+			<name>Reemplazar anillos asentando válvulas</name>
+			<est>2013,03,28</est>
+			<duration>20</duration>
+			<percentcompleted>0</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="13">
+			<name>Afinación de motor fuel ineccion</name>
+			<est>2013,03,28</est>
+			<duration>3</duration>
+			<percentcompleted>100</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="14">
+			<name>Cambiar terminales de dirección</name>
+			<est>2013,03,29</est>
+			<duration>40</duration>
+			<percentcompleted>0</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="15">
+			<name>Cambio de bomba gasolina</name>
+			<est>2013,03,26</est>
+			<duration>20</duration>
+			<percentcompleted>70</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+	</project>
+</projects>

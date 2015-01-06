@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<toolbar>
+	<item id="new_stock" type="button" img="add.png" imgdis="add.png" text="Nuevo" />
+	<item id="search_stock" type="button" img="database.gif" imgdis="database.gif" text="Buscar"></item>
+	
+</toolbar>

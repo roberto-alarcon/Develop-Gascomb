@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<toolbar>
+	<item id="new" type="buttonSelect" img="open.gif" imgdis="open_dis.gif" text="Perfil">
+		<item type="button"	id="salir" text="Salir"  />
+	</item>
+	<item id="vistas" type="buttonSelect" img="selection.gif" imgdis="selection.gif" text="Vistas">
+		<item type="button"	id="sistema"	 text="Panel Sistema"       />
+		<item type="button"	id="requisiciones" text="Panel Requisiciones" />
+		<item type="button"	id="inventarios" text="Control de inventarios" />
+		<!--item type="button"	id="preventivo" text="Panel Preventivo" /-->
+		
+	</item>
+	<item id="print" type="buttonSelect" img="settings.gif" imgdis="settings.gif" text="Administracion">
+		<item type="button"	id="usuarios"	 text="Usuarios" />
+		<item type="button"	id="empleados"	 text="Empleados"/>
+		<item type="button"	id="vehiculos"	 text="Vehiculos"/>
+		<item type="button"	id="images"	 text="Imagenes"/>
+		<item type="button"	id="contratos"	 text="Contratos"/>
+	</item>	
+</toolbar>

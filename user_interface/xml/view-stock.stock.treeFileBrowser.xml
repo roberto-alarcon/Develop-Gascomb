@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<tree id="0">
+	<item text="Root - Activas (4)" id="root" open="1" im0="lock.gif" im1="lock.gif" im2="iconSafe.gif" call="1" select="1">
+	<item text="(Requisicion:1 / Folio:39110)" id="1" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif">
+	<item text="05/04/13 01:51" id="1365119498" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif"></item>
+	<item text="05/04/13 02:08" id="1365120513" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif"></item>
+	<item text="05/04/13 02:12" id="1365120750" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif"></item>
+	<item text="05/04/13 02:21" id="1365121308" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif"></item>
+	</item>
+	<item text="(Requisicion:2 / Folio:32220)" id="2" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif">
+	<item text="05/04/13 01:48" id="1365119297" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif"></item>
+	</item>
+	<item text="(Requisicion:3 / Folio:12220)" id="3" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif">
+	<item text="05/04/13 01:48" id="1365119312" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif"></item>
+	<item text="05/04/13 02:09" id="1365120571" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif"></item>
+	<item text="05/04/13 02:11" id="1365120666" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif"></item>
+	</item>
+	<item text="(Requisicion:4 / Folio:76540)" id="4" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif">
+	</item>
+	</item>
+</tree> 

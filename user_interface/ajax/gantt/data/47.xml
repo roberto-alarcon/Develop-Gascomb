@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<projects>
+	<project id = "47" name = "Folio: 47 \ Placa: 123-TRE" startdate = "2013,03,26" >
+		<task id="4">
+			<name>Reemplazar purificador de aire</name>
+			<est>2013,03,26</est>
+			<duration>2</duration>
+			<percentcompleted>100</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="5">
+			<name>Reemplazar sensor de detonación</name>
+			<est>2013,03,26</est>
+			<duration>2</duration>
+			<percentcompleted>100</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="16">
+			<name>Lavado de tolvas</name>
+			<est>2013,03,29</est>
+			<duration>10</duration>
+			<percentcompleted>100</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="17">
+			<name>Cambio de cilindro</name>
+			<est>2013,03,29</est>
+			<duration>40</duration>
+			<percentcompleted>0</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="18">
+			<name>Cambio de válvulas de admisión y escape</name>
+			<est>2013,03,29</est>
+			<duration>20</duration>
+			<percentcompleted>50</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="19">
+			<name>Reparacion de cabezas de motor</name>
+			<est>2013,03,29</est>
+			<duration>50</duration>
+			<percentcompleted>10</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="20">
+			<name>Cambio deposito de recuperador de anticongela</name>
+			<est>2013,03,29</est>
+			<duration>30</duration>
+			<percentcompleted>20</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+	</project>
+</projects>

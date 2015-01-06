@@ -1,0 +1,19 @@
+Actividades para instalar modulo de Requisicion Electronica:
+
+1.-Subir a produccion:
+ftp://Gascomb/develop_html/modules/classes/class.quote.php
+ftp://Gascomb/develop_html/modules/classes/class.quote.items.php
+ftp://Gascomb/develop_html/modules/classes/class.quote.config.php
+ftp://Gascomb/develop_html/modules/classes/class.quote.stock.php
+ftp://Gascomb/develop_html/modules/classes/class.upload.php
+
+2.-Crear BD 'quote_gascomb'
+
+3.- Copiar estructura tablas al  Schema quote_gascomb 
+
+4.- Crear directorio de multimedia-quote en la raiz de secure_html
+
+5.- Cambiar la configuracion de :
+ftp://Gascomb/develop_html/modules/classes/class.quote.config.php
+
+

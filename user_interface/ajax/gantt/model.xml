@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projects>
+	<project id = "1" name = "Folio: 1 \ Placa: 561-YGF " startdate = "2013,04,27">
+		<task id="1">
+			<name>Reemplazar motor básico</name>
+			<est>2013,04,27</est>
+			<duration>20</duration>
+			<percentcompleted>100</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>		
+	</project>
+</projects>

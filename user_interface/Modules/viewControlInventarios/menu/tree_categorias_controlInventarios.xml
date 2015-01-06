@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<tree id="0">
+    
+    <item text='Root' id='root' open='1' im0='lock.gif' im1='lock.gif' im2='iconSafe.gif' call='1' select='1'>
+	    <item text="Stock" id="1" im0="folderOpen.gif" im1="folderOpen.gif" im2="folderClosed.gif">
+	    	<item text="Gasolina" id="11" im0="leaf.gif" im1="leaf.gif" im2="leaf.gif"></item> 
+	    	<item text="Diesel" id="12" im0="leaf.gif" im1="leaf.gif" im2="leaf.gif"></item> 
+	    	<item text="Bicombustible" id="13" im0="leaf.gif" im1="leaf.gif" im2="leaf.gif"></item> 
+	    	<item text="Laboratorio" id="14" im0="leaf.gif" im1="leaf.gif" im2="leaf.gif"></item> 
+	    	<item text="Inactivo" id="stock_off" im0="leaf.gif" im1="leaf.gif" im2="leaf.gif"></item>
+	    </item>	    
+	    <item text="Mercancia en consignacion" id="2" im0="leaf.gif" im1="leaf.gif" im2="leaf.gif"></item>
+	    <item text="Servicios" id="3" im0="leaf.gif" im1="leaf.gif" im2="leaf.gif"></item>
+	    <item text="Pedidos" id="4" im0="leaf.gif" im1="leaf.gif" im2="leaf.gif"></item>
+	</item>
+</tree> 

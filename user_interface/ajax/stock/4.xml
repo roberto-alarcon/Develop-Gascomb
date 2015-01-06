@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rows>
+	<row id="1">
+		<cell>Balatas delanteras</cell>
+		<cell>1</cell>
+		<cell>Jose Luis Ortiz</cell>
+		<cell>Entregado</cell>
+		<cell>24/02/2013 14:50</cell>
+		<cell></cell>
+	</row>
+	<row id="2">
+		<cell>Balatas traseras</cell>
+		<cell>1</cell>
+		<cell>Jose Luis Ortiz</cell>
+		<cell>Entregado</cell>
+		<cell></cell>
+		<cell>Esta pieza esta pendiente se solicito ya fue solicitada a la agencia 1 mes de entrega</cell>
+	</row>
+	
+	
+</rows>

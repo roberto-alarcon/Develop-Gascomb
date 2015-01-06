@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<projects>
+	<project id = "46" name = "Folio: 46 \ Placa: 123-TRE" startdate = "2013,03,26" >
+		<task id="6">
+			<name>Afinación y verificación vehículos carburados</name>
+			<est>2013,03,26</est>
+			<duration>20</duration>
+			<percentcompleted>50</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="7">
+			<name>Cambio de inyector de combustible, gasolina f</name>
+			<est>2013,03,29</est>
+			<duration>20</duration>
+			<percentcompleted>20</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="8">
+			<name>Cambio de sensor (map) motor fuell inyection</name>
+			<est>2013,03,26</est>
+			<duration>20</duration>
+			<percentcompleted>10</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="9">
+			<name>Cambio de sensor tps, motor fuell inyection</name>
+			<est>2013,03,29</est>
+			<duration>20</duration>
+			<percentcompleted>0</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+		<task id="10">
+			<name>Cambio de sensor de oxigen, motor fuell inyec</name>
+			<est>2013,03,28</est>
+			<duration>20</duration>
+			<percentcompleted>0</percentcompleted>
+			<predecessortasks></predecessortasks>
+			<childtasks></childtasks>
+		</task>
+	</project>
+</projects>

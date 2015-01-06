@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	   <item type="fieldset" name="data" label="" inputWidth="auto">
+		   <item type="select" label="Tipo" inputWidth="100">
+		   <option text="Folio" value="org" />
+		   <option text= "Placas" value="poweruser"/>
+		   <option text= "Requisicion" value="user" selected="true"/>
+		   <item type="input" name="pass" label="Numero" position="label"/>
+	   </item>
+       
+       <item type="button" name="save" value="Proceed"/>
+   </item>
+</items>

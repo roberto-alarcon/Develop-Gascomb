@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<tree id="0">
+	<item text="Raiz" id="root" open="1" im0="lock.gif" im1="lock.gif" im2="iconSafe.gif" call="1" select="1">
+		<item text="Formatos" id="folder" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif">
+			<item text="formato-cliente.pdf" id="formato-cliente.pdf" im0="leaf.gif" im1="book.gif" im2="leaf.gif"/>
+			<item text="formato-auto.pdf" id="formato-auto.pdf" im0="leaf.gif" im1="book.gif" im2="leaf.gif"/>
+		</item>
+		<item text="Fotos 23-03-13" id="folder2" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif">
+			<item text="20121125_132313.jpg" id="fotos_23-03-13/20121125_132313.jpg" im0="leaf.gif" im1="book.gif" im2="leaf.gif"/>
+			<item text="20121125_132341.jpg" id="fotos_23-03-13/20121125_132341.jpg" im0="leaf.gif" im1="book.gif" im2="leaf.gif"/>
+		</item>
+		<item text="Fotos 24-03-13" id="folder3" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif">
+			<item text="20121124_095836.jpg" id="fotos_24-03-13/20121124_095836.jpg" im0="leaf.gif" im1="book.gif" im2="leaf.gif"/>
+			<item text="20121124_095857.jpg" id="fotos_24-03-13/20121124_095857.jpg" im0="leaf.gif" im1="book.gif" im2="leaf.gif"/>
+			<item text="20121124_121305.jpg" id="fotos_24-03-13/20121124_121305.jpg" im0="leaf.gif" im1="book.gif" im2="leaf.gif"/>
+		</item>
+		<item text="Fotos 25-03-13" id="folder4" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif"></item>
+		<item text="Fotos 26-03-13" id="folder5" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif"></item>
+		<item text="Inventario" id="folder6" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif"></item>	
+	</item>	
+</tree> 

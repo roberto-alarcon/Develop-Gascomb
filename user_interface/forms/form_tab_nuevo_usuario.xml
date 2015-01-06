@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+   <item type="settings" position="label-right">
+	   <item type="label", label: "Settings"/>
+       <item type="input" name="name" label="Nombre(s)" position="label-top"/>
+       <item type="input" name="a-paterno" label="A Paterno" position="label-top"/>
+       <item type="input" name="a-materno" label="A Materno" position="label-top"/>
+	   <item type="input" name="name" label="Login" position="label-top"/>
+       <item type="password" name="pass" label="Password" position="label-top"/>
+       <item type="button" name="save" value="Proceed"/>
+   </item>
+</items>

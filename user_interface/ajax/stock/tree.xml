@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<tree id="0">
+	<item text="123456" id="root" open="1" im0="lock.gif" im1="lock.gif" im2="iconSafe.gif" call="1" select="1">
+		<item text="23/03/13 13:24" id="1" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif"></item>
+		<item text="24/03/13 10:13" id="2" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif"></item>
+		<item text="24/03/13 18:54" id="3" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif"></item>
+		<item text="26/03/13 11:01" id="4" im0="folderClosed.gif" im1="folderOpen.gif" im2="folderClosed.gif"></item>
+		
+	</item>	
+</tree> 
