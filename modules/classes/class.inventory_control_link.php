@@ -35,6 +35,116 @@ class InventoryLink extends InventoryControl{
 	}
 	
 	
+	// Metodo para obtener la catidad
+	public function getCantidad(){
+		
+		//1.- Obtenemos la cantidad que solicito el mecanico
+		$cantidad		= $this->obj_stock->getQuantityFromDetaisID($this->stock_details_id);
+		$cantidad		= (isset( $cantidad[0]['quantity'] )) ? $cantidad[0]['quantity'] : 0;
+		
+		return $cantidad;
+		
+		
+	}
+	
+	
+	// Metodo encargado de generar la viculacion de la compra mediante los parametros
+	//
+	public function createLinkByPurchaseDetails(){
+		
+		global $Gascomb;
+		// Verificamos la existencia dentro de la tabla compras
+		$Compra = new InventoryControlPurchase();
+		$Compra->id_purchase = '11';
+		
+		$existencia_proveedor 	= $Compra->getExistencia();
+		$cantidad		= $this->getCantidad();
+		echo $existencia_proveedor;
+		echo $cantidad;
+		
+		// Caso cuando la existencia es mayor a la cantidad solicitada
+		if( $existencia_proveedor >= $cantidad ){
+			
+			//Si esta el articulo dentro del inventario y hay en existencia
+			$data = array(
+					"folio_id" => $this->obj_stock->folio,
+					"stock_id" => $this->obj_stock->getStockIdByDetails( $this->stock_details_id ),
+					"stock_details_id" => $this->stock_details_id,
+					"id_inventory_control" => $this->id_inventory_control,
+					"id_inventory_purchase" => $Compra->id_purchase, 
+					"cantidad" => $cantidad,
+					"user_id" => $Gascomb->session_user_id(),
+					"fecha_ingreso" => time(),
+					"fecha_modificacion" => time()
+					
+			);
+			
+			$db = new manejaDB(BD_STOCK_USER,BD_STOCK_PASSWORD,BD_STOCK_DATABASE,BD_STOCK_SERVER);
+			$db->makeQueryInsert(Table_Inventory_Link,$data);
+			$db->desconectar();
+			
+			// Actualizamos el status de la tabla stock
+			$this->obj_stock->updateStockStatusLink($this->stock_details_id);
+			
+			echo $this->jsonMessage['link'];
+			
+			
+			
+		}else{
+			
+			// Notificamos que no tenemos producto en existencia
+			echo $this->jsonMessage['existencia']; 
+		}// Notificamos que no tenemos producto en existencia
+		
+		
+		
+		
+		
+		/*
+		global $Gascomb;
+
+		$existencia = $this->getExistenciaID($this->id_inventory_control);
+		$cantidad	= $this->obj_stock->getQuantityFromDetaisID($this->stock_details_id);
+		$existencia = (isset( $existencia[0]['existencia'] )) ? $existencia[0]['existencia'] : 0;
+		$cantidad	= (isset( $cantidad[0]['quantity'] )) ? $cantidad[0]['quantity'] : 0;
+		
+		if( $existencia >= $cantidad ){
+			
+			//Si esta el articulo dentro del inventario y hay en existencia
+			$data = array(
+					"folio_id" => $this->obj_stock->folio,
+					"stock_id" => $this->obj_stock->getStockIdByDetails( $this->stock_details_id ),
+					"stock_details_id" => $this->stock_details_id,
+					"id_inventory_control" => $this->id_inventory_control,
+					"cantidad" => $cantidad,
+					"user_id" => $Gascomb->session_user_id(),
+					"fecha_ingreso" => time(),
+					"fecha_modificacion" => time()
+					
+			);
+			
+			$db = new manejaDB(BD_STOCK_USER,BD_STOCK_PASSWORD,BD_STOCK_DATABASE,BD_STOCK_SERVER);
+			$db->makeQueryInsert(Table_Inventory_Link,$data);
+			$db->desconectar();
+			
+			// Actualizamos el status de la tabla stock
+			$this->obj_stock->updateStockStatusLink($this->stock_details_id);
+			
+			echo $this->jsonMessage['link'];
+			
+			
+			
+		}else{
+			
+			// Notificamos que no tenemos producto en existencia
+			echo $this->jsonMessage['existencia']; 
+		}
+		
+		*/
+		
+	}
+	
+	
 	public function createLink(){
 		
 		global $Gascomb;

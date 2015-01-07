@@ -247,13 +247,16 @@ class InventoryControl{
 			
 			
 			$status = ($item['status'] == 1)?'Activo':'N/A';
+			$Compra = new InventoryControlPurchase();
+			$Compra->id_inventory_control = $item['id_inventory_control'];
+			$existencia = $Compra->getTotalProductsById();
 			
 			$grid .= '<row id="'.$item['id_inventory_control'].'">';
 			$grid .= '<cell>'.$item['codigo_producto'].'</cell>';
 			$grid .= '<cell>'.$item['sku'].'</cell>';
 			$grid .= '<cell>'.$item['producto'].'</cell>';
 			$grid .= '<cell>'.$item['tipo'].'</cell>';
-			$grid .= '<cell>'.$item['existencia'].'</cell>';
+			$grid .= '<cell>'.$existencia.'</cell>';
 			$grid .= '</row>';
 			
 		}

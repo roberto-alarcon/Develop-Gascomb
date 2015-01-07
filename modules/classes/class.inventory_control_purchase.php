@@ -8,6 +8,9 @@ include_once 'class.users.php';
 class InventoryControlPurchase extends InventoryControl{
 
 	
+	var $id_purchase;
+	
+	
 	// Metodo para insertar una compra
 	public function insert(){
 	
@@ -87,6 +90,8 @@ class InventoryControlPurchase extends InventoryControl{
 		
 	}
 	
+	
+	// Metodo para obtener el total de existencia de varios proveedores
 	public function getExistenciaPurchaseById(){
 	
 		$elements = array();
@@ -101,6 +106,32 @@ class InventoryControlPurchase extends InventoryControl{
 		$db->desconectar();
 		return $elements;
 	
+	}
+	
+	// Metodo para obtener el total de existencia de 1 compra
+	public function getExistencia(){
+		
+		$existencia = 0;
+		$elements = array();
+		$db = new manejaDB(BD_STOCK_USER,BD_STOCK_PASSWORD,BD_STOCK_DATABASE,BD_STOCK_SERVER);
+		$query = "SELECT total_existencia FROM ".Table_Inventory_Purchase." where status = '1' and id_purchase = '".$this->id_purchase."' order by fecha_ingreso DESC;";
+		$db->query($query);
+	
+		if( $db->numLineas() != 0 ){
+			$elements = $db->getArrayAsoc();
+		}
+	
+		$db->desconectar();
+		
+		if(!empty($elements)){
+			
+			$existencia = intval($elements[0]['total_existencia']);	
+			
+		}
+		
+		return $existencia;
+		
+		
 	}
 	
 	

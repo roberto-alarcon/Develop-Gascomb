@@ -190,49 +190,100 @@ var viewAdminRequisiciones = function(){
 			
 						if(id == 'btn_buscar_entrance'){
 							
-							var tipo = toolbar_entrance.getValue('input_tipo');
-							
-							grid_entrance = tabbar_control.cells("tab1").attachGrid();
-							grid_entrance.setHeader("Codigo , SKU, Producto, Tipo,Existencia");
-							grid_entrance.setImagePath("./dhtmlxLibrary/dhtmlxGrid/codebase/imgs/");
-							grid_entrance.setInitWidths("*");
-							grid_entrance.setColTypes("ro,ro,ro,ro,ro");
-							grid_entrance.init();
-							grid_entrance.loadXML("./Modules/viewAdminRequisiciones/ajax/grid_control_de_inventarios.search_tipo.php?tipo="+tipo);
-	                                                
-	                            grid_entrance.attachEvent("onRowDblClicked", function(rId,cInd){
-	                                            
-	                            	id_inventory_control = rId;                            	
-	                    			dhtmlxAjax.get("./Modules/viewAdminRequisiciones/ajax/action_create_link.php?folio_id="+folio.toString()+"&stock_detail_id="+stock_detail_id+'&id_inventory_control='+id_inventory_control ,function(loader){	            
-	                    				
-	                    				var response = JSON.parse(loader.xmlDoc.responseText);
-	                    				console.log(response);
-	                    				switch(response.code){
-	                    					case 0:
-	                    						alert(response.msj);
-	                    						break;
-	                    						
-	                    					case 1:
-	                    						dhxWins.window(idwindow_control).close();
-	                    						
-	                    						grid_requisiciones.clearAndLoad("./Modules/viewAdminRequisiciones/ajax/view-stock.stock.grid.php?id="+stock_id);
-	                    						grid_stock.clearAndLoad("./Modules/viewAdminRequisiciones/ajax/grid_link_in_stock.php?id="+stock_id+"&folio_id="+folio.toString());
-	                    						grid_stock_entregas.clearAndLoad("./Modules/viewAdminRequisiciones/ajax/grid_link_in_stock.php?check=true&id="+stock_id+"&folio_id="+folio.toString());
-	                    						
-	                    						break;
-	                    				
-	                    				}
-	                    				
-	                    				
-	                    						
-	                    		    });
-	                            	
-	                            	
-	                            	
-	                             
-	                            });
-							}
-					});
+								var tipo = toolbar_entrance.getValue('input_tipo');
+									
+								// Agregamos un layout al tab1
+								layoutDetalles = tabbar_control.cells("tab1").attachLayout("2E");
+								var layout_grid_stock = layoutDetalles.cells('a');
+								var layout_grid_stock_details = layoutDetalles.cells('b');
+								layout_grid_stock.setText('Stock');
+								layout_grid_stock_details.setText('Existencia');
+								layout_grid_stock_details.setHeight('150');
+		
+								grid_entrance = layout_grid_stock.attachGrid();
+								grid_entrance.setHeader("Codigo , SKU, Producto, Tipo,Existencia");
+								grid_entrance.setImagePath("./dhtmlxLibrary/dhtmlxGrid/codebase/imgs/");
+								grid_entrance.setInitWidths("*");
+								grid_entrance.setColTypes("ro,ro,ro,ro,ro");
+								grid_entrance.init();
+								grid_entrance.loadXML("./Modules/viewAdminRequisiciones/ajax/grid_control_de_inventarios.search_tipo.php?tipo="+tipo);
+																											
+								
+								/*
+								 *La vinculación se tiene que realizar por medio de el detalle
+								 *
+								grid_entrance.attachEvent("onRowDblClicked", function(rId,cInd){
+																
+										id_inventory_control = rId;                            	
+										dhtmlxAjax.get("./Modules/viewAdminRequisiciones/ajax/action_create_link.php?folio_id="+folio.toString()+"&stock_detail_id="+stock_detail_id+'&id_inventory_control='+id_inventory_control ,function(loader){
+												var response = JSON.parse(loader.xmlDoc.responseText);
+												console.log(response);
+												switch(response.code){
+														case 0:
+														alert(response.msj);
+												break;
+												
+												case 1:
+														dhxWins.window(idwindow_control).close();
+												
+														grid_requisiciones.clearAndLoad("./Modules/viewAdminRequisiciones/ajax/view-stock.stock.grid.php?id="+stock_id);
+														grid_stock.clearAndLoad("./Modules/viewAdminRequisiciones/ajax/grid_link_in_stock.php?id="+stock_id+"&folio_id="+folio.toString());
+														grid_stock_entregas.clearAndLoad("./Modules/viewAdminRequisiciones/ajax/grid_link_in_stock.php?check=true&id="+stock_id+"&folio_id="+folio.toString());
+												
+												break;
+										
+												}
+										});
+																		
+																		
+																		
+								});*/
+								
+								grid_entrance.attachEvent("onRowSelect", function(id){
+        	    // Agregamos grid
+										grid_details = layout_grid_stock_details.attachGrid();
+										grid_details.setHeader("Proveedor, Número existencia, Precio unitario, Número factura");
+										grid_details.setImagePath("./dhtmlxLibrary/dhtmlxGrid/codebase/imgs/");
+										grid_details.setInitWidths("*");
+										grid_details.setColTypes("ro,ro,ro,ro");
+										grid_details.init();
+										grid_details.loadXML("./Modules/viewControlInventarios/grids/grid.item.details.php?id="+id);
+										
+										grid_details.attachEvent("onRowDblClicked", function(rId,cInd){
+												
+												id_inventory_control = rId;                            	
+												dhtmlxAjax.get("./Modules/viewAdminRequisiciones/ajax/action_create_link.php?folio_id="+folio.toString()+"&stock_detail_id="+stock_detail_id+'&id_inventory_control='+id_inventory_control ,function(loader){
+														var response = JSON.parse(loader.xmlDoc.responseText);
+														console.log(response);
+														switch(response.code){
+																case 0:
+																alert(response.msj);
+														break;
+														
+														case 1:
+																dhxWins.window(idwindow_control).close();
+														
+																grid_requisiciones.clearAndLoad("./Modules/viewAdminRequisiciones/ajax/view-stock.stock.grid.php?id="+stock_id);
+																grid_stock.clearAndLoad("./Modules/viewAdminRequisiciones/ajax/grid_link_in_stock.php?id="+stock_id+"&folio_id="+folio.toString());
+																grid_stock_entregas.clearAndLoad("./Modules/viewAdminRequisiciones/ajax/grid_link_in_stock.php?check=true&id="+stock_id+"&folio_id="+folio.toString());
+														
+														break;
+												
+														}
+												});
+												
+												
+										});
+										
+										
+										
+										
+								});	
+								
+								
+						}
+					
+				});
 				
 
 				// Este TAB se activara cuando se incluya el modulo de venta electronica
