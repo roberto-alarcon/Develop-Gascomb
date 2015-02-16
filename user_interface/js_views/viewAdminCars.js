@@ -5,7 +5,7 @@
 *25/03/2014
 ********************************/
 
-var formModel = [{
+var formModel2 = [{
 		type: "fieldset",
 		label: "Agregar nuevo modelo:",
 		inputWidth: 320,
@@ -263,7 +263,7 @@ var viewAdminCars = function(){
                     w2 = dhxWins.createWindow("w1", 10, 10, 350, 200);
                     w2.setText("Nuevo modelo");
                     w2.centerOnScreen();
-                    formModell = w2.attachForm(formModel);
+                    formModell = w2.attachForm(formModel2);
                     
                     formModell.attachEvent("onButtonClick", function(name, command){			
 				if(name=="save"){

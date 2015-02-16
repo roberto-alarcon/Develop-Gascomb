@@ -113,7 +113,7 @@
 	<script src="./forms/new_supplier.js"></script>
 	
 	<!-- Incluimos vistas -->
-	<script src="./js_views/viewAdminCars.js"></script>
+	<script src="./js_views/viewAdminCars.js?cache=<?php echo time();?>"></script>
 	<script src="./js_views/viewControlInventarios.js?cache=<?php echo time();?>"></script>
 	<script src="./js_views/viewAdminImages.js?cache=<?php echo time();?>"></script>
 	<script src="./js_views/viewAdminRequisiciones.js?cache=<?php echo time();?>"></script>
