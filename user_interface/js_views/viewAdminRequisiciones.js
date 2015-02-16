@@ -240,7 +240,7 @@ var viewAdminRequisiciones = function(){
 								});*/
 								
 								grid_entrance.attachEvent("onRowSelect", function(id){
-        	    // Agregamos grid
+        	    // Agregamos grid detalles
 										grid_details = layout_grid_stock_details.attachGrid();
 										grid_details.setHeader("Proveedor, Número existencia, Precio unitario, Número factura");
 										grid_details.setImagePath("./dhtmlxLibrary/dhtmlxGrid/codebase/imgs/");
