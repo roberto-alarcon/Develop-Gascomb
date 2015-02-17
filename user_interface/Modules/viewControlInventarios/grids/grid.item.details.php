@@ -1,13 +1,34 @@
 <?php 
-header("Content-type: text/xml");
-include_once('/home/gascomb/secure_html/config/set_variables.php');
-include_once (PATH_CLASSES_FOLDER.'class.inventory_control_purchase.php');
+// send
+// id de inventario
 
-$id_inventory_control = $_GET['id'];
-//$id_inventory_control = 291;
 
-$entrance = new InventoryControlPurchase();
-$entrance->id_inventory_control = $id_inventory_control;
-echo $entrance->gridAvailableByID_Iventory();
+
+
+// return 
+/*
+ * Proveedor
+ * Numero existencia
+ * Precio Unitario
+ * Numero de Factura
+ */
+
+echo '<rows>
+	<row id="11">
+	<cell>Proveedor dummy 1</cell>
+	<cell>11</cell>
+	<cell> $14.80</cell>
+	<cell>AA12345</cell>
+	</row>
+	<row id="11">
+	<cell>Proveedor dummy 2</cell>
+	<cell>22</cell>
+	<cell>  $15.20</cell>
+	<cell>BB12345</cell>
+	</row>	
+	</rows>';
+		
+
+
 
 ?>

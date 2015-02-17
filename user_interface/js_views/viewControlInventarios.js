@@ -11,19 +11,19 @@ var myFormEntrance = [
 				{type:"label", label:"Informacion del producto", position:"label-left"},
 				{type: "input", name:"numero", value:"1", position:"label-left", label: "&nbsp;&nbsp;Numero ingreso:", labelWidth:120, width:100,  validate: "NotEmpty"},
 				{type: "input", name:"precio_unitario", label: "&nbsp;&nbsp;Precio unitario :", labelWidth:120,width:100, validate: "NotEmpty"},
-				//{type: "input", name:"proveedor", label: "&nbsp;&nbsp;Proveedor :", labelWidth:120,width:200, validate: "NotEmpty"},
-				
-				{type: "combo", name:"proveedor", width:200, label: "&nbsp;&nbsp;Proveedor :", labelWidth:120,filtering:true},
+				{type: "combo", name:"proveedor", width:225, label: "&nbsp;&nbsp;Proveedor :", labelWidth:120,filtering:true},
 				
 				{type:"label", label:"Datos Factura"},
-                {type: "input", name:"fecha_facturacion", position:"label-left", label: "&nbsp;&nbsp;Fecha Facturación:", labelWidth:120, width:100,  validate: "NotEmpty"},				
+				{type: "calendar", labelWidth:120,label: "&nbsp;&nbsp;Fecha Facturación:", width:100, dateFormat: "%d/%m/%Y", value: "", name: "fecha_facturacion", validate: "NotEmpty"},
 				{type: "input", name:"no_factura", position:"label-left", label: "&nbsp;&nbsp;Num factura/nota:", labelWidth:120, width:100,  validate: "NotEmpty"},				
-				{type: "radio", name: "tipo_pago", value: "1", label: "&nbsp;&nbsp;Factura",position:"label-left", checked: true},
-				{type: "radio", name: "tipo_pago", value: "0", label: "&nbsp;&nbsp;Nota remisión",position:"label-left"},				
-				{type: "input", name:"code", position:"label-left", label: "&nbsp;&nbsp;Ingresa tu código:", labelWidth:120, width:100,  validate: "NotEmpty"},				
-			
+				
+				{type: "radio", name: "tipo_pago", value: "1", label: "Factura",position:"label-right", checked: true},
+				{type: "radio", name:"tipo_pago",label: "Nota remisión", position: "label-right",value:"0",
+					list: [
+						{type: "input",name:"code",label: "&nbsp;&nbsp;Ingresa tu código:", value: "", labelWidth:120,width:100}, 
+						]
+				},					
 			//]},
-				{type:"label", label:""},
 				{type:"label", label:""},
 				{type: "block", inputWidth: 260, list:[
 					{type: "button", name:"guardar", value: "Guardar"},
@@ -232,18 +232,21 @@ var viewControlInventarios = function(){
 				// Formulario
 				form_entrace = dhxLayout_entrance.cells('c').attachForm(myFormEntrance);
 				
-				var autocomplete_p = form_entrace.getCombo("proveedores");
+				var autocomplete_p = form_entrace.getCombo("proveedor");
 				autocomplete_p.enableFilteringMode(true, "ajax/search_supplier.php", true, true);
-				
-				
+
 				form_entrace.attachEvent("onButtonClick", function(btn) {
-					
+				    
 					if(btn == 'guardar'){
-						
-						form_entrace.send("./Modules/viewControlInventarios/ajax/viewControlInventario.formEntrance.php?id="+id_inventory,"post",function(loader, response){
-							  alert("Los datos han sido guardados exitosamente");
-							  
-							  grid_log.clearAndLoad("./Modules/viewControlInventarios/ajax/grid_control_de_inventarios.history_entrance.php?id="+id_inventory);
+						form_entrace.send("./Modules/viewControlInventarios/forms/form.purchase.add.php?id="+id_inventory,"post",function(loader, response){
+								var objJSON = eval("(function(){return " + response + ";})()");
+								if(objJSON.return == "1"){
+									alert("Guardado correctamente");
+
+								}else{
+									alert("Se produjo un error, favor de volver a intentar");
+								}							  
+							    grid_log.clearAndLoad("./Modules/viewControlInventarios/ajax/grid_control_de_inventarios.history_entrance.php?id="+id_inventory);
 						});
 						
 					}
