@@ -9,6 +9,7 @@ include_once PATH_CLASSES_FOLDER.'class.inventory.php';
 include_once PATH_CLASSES_FOLDER.'class.dependency.php';
 include_once PATH_CLASSES_FOLDER.'class.activities.php';
 include_once PATH_CLASSES_FOLDER.'class.employees.php';
+include_once PATH_CLASSES_FOLDER.'class.users.php';
 include_once PATH_CLASSES_FOLDER.'class.type_activities.php';
 
 
