@@ -23,4 +23,6 @@ echo "BD PASS -> ".BD_PASSWORD."<br>";
 echo "BD DATABASE -> ".BD_DATABASE."<br>";
 echo "BD SERVER -> ".BD_SERVER."<br>";
 
+echo "<h3>Variables Globales Server Ubutntu</h3>";
+print_r($Gascomb);
 ?>
