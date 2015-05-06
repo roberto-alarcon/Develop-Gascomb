@@ -24,5 +24,6 @@ echo "BD DATABASE -> ".BD_DATABASE."<br>";
 echo "BD SERVER -> ".BD_SERVER."<br>";
 
 echo "<h3>Variables Globales Server Ubutntu 1.2</h3>";
+echo "<h3>Sin conflictos</h3>";
 print_r($Gascomb);
 ?>
