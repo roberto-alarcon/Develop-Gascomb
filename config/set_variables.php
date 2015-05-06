@@ -15,7 +15,7 @@ if ( $_SERVER['SERVER_NAME'] == 'localhost' ){
 }elseif($_SERVER['SERVER_NAME'] == 'localhost'){	
 	include_once('host/localhost.php');
 }elseif ($_SERVER['SERVER_NAME'] == 'github-develop.gascomb.com') {
-	include_once('host/develop.gascomb.com.php');
+	include_once('host/github-develop.gascomb.com.php');
 }else{
 	// Main Site
 	die("No existe una configuracion para el host ".$_SERVER['SERVER_NAME']);
