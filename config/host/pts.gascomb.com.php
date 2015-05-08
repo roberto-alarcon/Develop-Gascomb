@@ -1,7 +1,5 @@
 <?php
-//https://pts.gascomb.com/user_interface/ || http://desarrollo.grupome.com
-//https://pts.gascomb.com/multimedia/ || http://desarrollo-i2.grupome.com/ 
-// /home/gascomb/secure_html/ || /home/grupome/public_html/dev_controlProcess/
+
 define("DOMAIN", "http://pts.gascomb.com/");
 define("PATH_DHTMLX_LIBRARY", "http://pts.gascomb.com/dhtmlxLibrary/");
 define("PATH_USER_INTERFACE_AJAX", "http://pts.gascomb.com/ajax/");
@@ -9,7 +7,7 @@ define("PATH_MULTIMEDIA", "http://i2.gascomb.com/");
 define("PATH_MULTIMEDIA_BASE", '/home/gascomb/pts_secure_html/Develop-Gascomb/multimedia');
 define("PATH_BASE_FOLDER", '/home/gascomb/pts_secure_html/Develop-Gascomb/');
 define("PATH_CLASSES_FOLDER", '/home/gascomb/pts_secure_html/Develop-Gascomb/modules/classes/');
-define("URL_MULTIMEDIA","http://i2.gascomb.com/");
+define("URL_MULTIMEDIA","http://cnd-pts.gascomb.com/");
 define("QR_IMAGE_URL",PATH_MULTIMEDIA."[id_folio]/_qrcode/qrcode.png");
 define("PDF_URL",PATH_MULTIMEDIA."[id_folio]/pdf/[id_folio].pdf");
 define("PATH_IMAGE_INVENTORY", "/multimedia/inventory/");
