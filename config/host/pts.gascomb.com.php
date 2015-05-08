@@ -3,7 +3,7 @@
 define("DOMAIN", "http://pts.gascomb.com/");
 define("PATH_DHTMLX_LIBRARY", "http://pts.gascomb.com/dhtmlxLibrary/");
 define("PATH_USER_INTERFACE_AJAX", "http://pts.gascomb.com/ajax/");
-define("PATH_MULTIMEDIA", "http://i2.gascomb.com/");
+define("PATH_MULTIMEDIA", "http://cnd-pts.gascomb.com/");
 define("PATH_MULTIMEDIA_BASE", '/home/gascomb/pts_secure_html/Develop-Gascomb/multimedia');
 define("PATH_BASE_FOLDER", '/home/gascomb/pts_secure_html/Develop-Gascomb/');
 define("PATH_CLASSES_FOLDER", '/home/gascomb/pts_secure_html/Develop-Gascomb/modules/classes/');
