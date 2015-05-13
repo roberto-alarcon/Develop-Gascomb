@@ -435,6 +435,7 @@
 						}
 						
 						//formfolio = null;
+						//tab nuevo
 						 if(id == "a3"){					 
 						 
 							//formfolio.clear();
@@ -561,8 +562,9 @@
 																
 								}
 								
+								//guardar Desktop
 								if (id == "guardar") {
-									
+									formfolio.setItemValue("type_capture", "0");
 									var serviciosarealizar = encodeURI(obtenervalores("activities"));
 									formfolio.send("ajax/ajaxFolio.php?action=add&act="+serviciosarealizar, function(loader, response) {
 										var objJSON = eval("(function(){return " + response + ";})()");
@@ -583,7 +585,7 @@
 												
 												form_inventario.attachEvent("onButtonClick", function(id) {
 													if (id == "guardar") { 
-														dhtmlx.message({id:"msg_save_inv",text: "Guardando informaci������n del Inventario y generando formato PDF...",expire: -1})
+														dhtmlx.message({id:"msg_save_inv",text: "Guardando informacion del Inventario y generando formato PDF...",expire: -1})
 														
 														form_inventario.send("ajax/ajaxInventory.php?action=add&folio_id="+folio_id, function(loader, response) {
 															var objJSON = eval("(function(){return " + response + ";})()");
@@ -614,7 +616,27 @@
 											alert("error:"+response);									
 										}								
 									});
-								}					
+								}
+
+								//guardar IPAD
+								if (id == "guardarIPAD") {
+									formfolio.setItemValue("type_capture", "1");
+									//var m = formfolio.getItemValue("type_capture");
+									var serviciosarealizar = encodeURI(obtenervalores("activities"));
+									formfolio.send("ajax/ajaxFolio.php?action=add&act="+serviciosarealizar, function(loader, response) {
+										var objJSON = eval("(function(){return " + response + ";})()");
+										if(objJSON.return == "1"){
+											//isTabinventoryOpen = true;											
+											folio_id = objJSON.data.folio_id;
+											//stocktaking[2].list[0].url = "ajax/upload_images.php?folio_id="+folio_id;																                                         
+											dhtmlx.message({id:"msg_save_IPAD",text: "Registro almacenado correctamente con el folio "+ folio_id,expire: -1})
+                                            formfolio.clear();											
+										}else{
+											//console.log(response);
+											alert("error:"+response);									
+										}
+									});
+								}								
 								
 							});//Fin Tab Nuevo
 							

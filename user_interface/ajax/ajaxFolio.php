@@ -12,7 +12,7 @@ include_once PATH_CLASSES_FOLDER.'class.stock.php';
 include_once PATH_CLASSES_FOLDER.'class.folio.control.php';
 include_once PATH_CLASSES_FOLDER.'class.checklist.php';
 global $Gascomb;
-	//print_r($_REQUEST);
+	#echo "<pre>"; print_r($_REQUEST); echo "</pre>"; die();
 	if(!empty($_REQUEST)){
 		foreach($_REQUEST as $x => $y){
 			//$_REQUEST[$x] = utf8_decode(strtoupper($y));
@@ -54,11 +54,11 @@ global $Gascomb;
 	$folio_data["vin"] = $_REQUEST["vin"];	
 	$folio_data["area_sector"] = $_REQUEST["area_sector"];
 	$folio_data["zone"] = $_REQUEST["zone"];
-
 	
 	$folio_data["order_number"] = $_REQUEST["order_number"];
 	$folio_data["type_service"] = $_REQUEST["type_service"];
 	$folio_data["failures"] = $_REQUEST["failures"];
+	$folio_data["type_capture"] = $_REQUEST["type_capture"];
 	
 	$vehicle_data["registration_plate"] = $_REQUEST["registration_plate"];
 	$vehicle_data["economic_number"] = $_REQUEST["economic_number"];
@@ -79,7 +79,7 @@ global $Gascomb;
 	$vehicle_data["fuel"] = $_REQUEST["fuel"];	
 
 	if(isset($_REQUEST['action']) && $_REQUEST['action'] == 'ADD'){
-		
+
 		//$contracts_data["dependency_id"] = $_REQUEST["dependency_id"];
 		//$contract = new Contract;
 		//$contractdata = $contract->add($contracts_data);		
@@ -133,7 +133,9 @@ global $Gascomb;
 		$stock = new Stock($folio["folio_id"]);
 		$stock->createNewRequisition();
 		
-		
+		if ($_REQUEST["type_capture"] == '1'){
+           include_once "genqrcodeipad.php";		
+		}   
 		
 		echo  '{"return":"1","data":'.json_encode($folio).'}';	
 

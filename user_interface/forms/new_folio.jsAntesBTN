@@ -10,7 +10,6 @@ var new_folio = [
 					{text: "--", value: "", selected:true}
 				]},				
 			{type: "input", position:"label-left", name:"owner_name", label: "Nombre(s):", validate: "NotEmpty",labelWidth:120, width:300},
-			{type: "input", name:"type_capture", type:"hidden"},
 			{type: "input", name:"owner_adress", label: "Dirección:", validate: "NotEmpty", labelWidth:120,width:300},			
 			{type: "input", name:"owner_phone", label: "Teléfono:", validate: "NotEmpty", labelWidth:120,width:150},
 			{type: "input", name:"owner_cell", label: "Celular:", labelWidth:120,width:150},
@@ -76,12 +75,10 @@ var new_folio = [
 			
 			
 			{type:"label", label:""},
-			{type: "block", inputWidth: 400, list:[
+			{type: "block", inputWidth: 260, list:[
 				{type: "button", name:"guardar", value: "Guardar"},
 				{type:"newcolumn"},
-				{type: "button", name:"reset", value: "Reset" },
-				{type:"newcolumn"},
-				{type: "button", name:"guardarIPAD", value: "Guardar IPAD"},
+				{type: "button", name:"reset", value: "Reset"	}
 			]}
 		
 		]},							
