@@ -390,9 +390,9 @@ AL RECIBIR EL
 				$value = $keys[$contador];
 				echo "<td style='width:15%;height: 8px;'><p>".ucfirst(str_replace('_', ' ', $keys[$contador]))."</p></td>";
 					if($Inventory[$value] == "1"){
-						echo "<td style='width:2.5%;height: 8px;'><img src='../img/chekbox_true.png'></td><td style='width:2.5%;height: 8px;'>&nbsp;</td>";
+						echo "<td style='width:2.5%;height: 8px;'><img src='http://develop.gascomb.com/user_interface/img/chekbox_true.png'></td><td style='width:2.5%;height: 8px;'>&nbsp;</td>";
 					}else{
-						echo "<td style='width:2.5%;height: 8px;'>&nbsp;</td><td style='width:2.5%;height: 8px;'><img src='../img/chekbox_false.png'></td>";
+						echo "<td style='width:2.5%;height: 8px;'>&nbsp;</td><td style='width:2.5%;height: 8px;'><img src='http://develop.gascomb.com/user_interface/img/chekbox_false.png'></td>";
 					} 
 				//echo "<td style='padding:3px;'>".$keys[$contador].$Inventory[$value].$contador."</td>";			
 				$contador++;

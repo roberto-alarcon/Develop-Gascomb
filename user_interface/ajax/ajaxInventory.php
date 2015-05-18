@@ -66,6 +66,8 @@ global $Gascomb;
 		
 		include_once "generatepdf.php";
 		echo  '{"return":"1","data":['.json_encode($Inventory).']}';	
+		
+
   	}
   	
   	if(isset($_REQUEST['action']) && $_REQUEST['action'] == 'update'){

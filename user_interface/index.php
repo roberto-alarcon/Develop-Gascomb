@@ -630,7 +630,7 @@
 											folio_id = objJSON.data.folio_id;
 											//stocktaking[2].list[0].url = "ajax/upload_images.php?folio_id="+folio_id;																                                         
 											dhtmlx.message({id:"msg_save_IPAD",text: "Registro almacenado correctamente con el folio "+ folio_id,expire: -1})
-                                            formfolio.clear();											
+                                            //formfolio.clear();											
 										}else{
 											//console.log(response);
 											alert("error:"+response);									
