@@ -2,6 +2,7 @@
 error_reporting(-1);
 ini_set('display_errors', '1');
 define("DOMAIN", "http://github-develop.gascomb.com/");
+define("COMPANY", "Gascomb");
 define("PATH_DHTMLX_LIBRARY", "http://github-develop.gascomb.com/user_interface/dhtmlxLibrary/");
 define("PATH_USER_INTERFACE_AJAX", "http://github-develop.gascomb.com/user_interface/ajax/");
 define("PATH_MULTIMEDIA", "http://develop.gascomb.com/multimedia/");

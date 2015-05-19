@@ -19,7 +19,7 @@ foreach ($folios_mobile as $clave => $valor) {
 				$pad_pending[$clave]['url_qrcode'] = $qrcode;
 				$pad_pending[$clave]['dependency'] = utf8_encode($dependency);
 				$pad_pending[$clave]['plate'] = $valor['registration_plate'];
-				$pad_pending[$clave]['company'] = "Gascomb";				
+				$pad_pending[$clave]['company'] = COMPANY;				
 }
 #echo "<pre>"; print_r($pad_pending); echo "</pre>"; die();
 echo json_encode($pad_pending);
