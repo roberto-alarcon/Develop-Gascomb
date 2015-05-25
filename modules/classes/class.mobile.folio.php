@@ -15,6 +15,7 @@ class FoliosMobiles
 	var $supplierdata = array();
 	var $updatewhere = array();
     var $type_capture = "1";
+	var $table = "folios";
 	
 
 
@@ -60,5 +61,42 @@ class FoliosMobiles
 			return($res);	
     	
     }
+	
+	public function update($folio,$data){
+			$db = new manejaDB();			
+			$this->updatewhere = array("folio_id"=>$folio);
+			$result = $db->makeQueryUpdate($this->table,$data,$this->updatewhere);
+			$db->desconectar();
+			return($result);           			
+               
+    }	
+	
+    public function getPlate( $id ){
+
+            $db = new manejaDB(BD_STOCK_USER,BD_STOCK_PASSWORD,BD_STOCK_DATABASE,BD_STOCK_SERVER);
+			$db->query("select registration_plate from ".$this->table." where folio_id = '".$id."'");
+			
+			$result = $db->getArrayAsoc();	
+			$result = ($result)? $result : false ;
+			foreach ($result as $clave => $valor) {
+				$res = $valor['registration_plate'];
+			}			
+			return($res);	
+    	
+    }
+
+    public function getIDinventory( $id ){
+
+            $db = new manejaDB(BD_STOCK_USER,BD_STOCK_PASSWORD,BD_STOCK_DATABASE,BD_STOCK_SERVER);
+			$db->query("select inventory_id from ".$this->table." where folio_id = '".$id."'");
+			
+			$result = $db->getArrayAsoc();	
+			$result = ($result)? $result : false ;
+			foreach ($result as $clave => $valor) {
+				$res = $valor['inventory_id'];
+			}			
+			return($res);	
+    	
+    }	
 
 }

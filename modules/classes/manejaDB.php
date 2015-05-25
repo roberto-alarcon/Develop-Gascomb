@@ -258,7 +258,9 @@ class manejaDB extends Watchful
 		return $lastId;
 		
 		
+		
 	}
+	
 	
 	function makeQueryUpdate($tabla,$array,$where){
 	
@@ -279,7 +281,6 @@ class manejaDB extends Watchful
 		$datos_where=implode(" AND ",$datos_where);
 		
 		
-		
 		$sql="
 		Update $tabla set 
 		$datos
@@ -292,6 +293,10 @@ class manejaDB extends Watchful
 		}else{
 			return false;
 		}
+		#return $sql;
+		
+		
+		
 		
 	}
 	

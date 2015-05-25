@@ -587,7 +587,8 @@
 													if (id == "guardar") { 
 														dhtmlx.message({id:"msg_save_inv",text: "Guardando informacion del Inventario y generando formato PDF...",expire: -1})
 														
-														form_inventario.send("ajax/ajaxInventory.php?action=add&folio_id="+folio_id, function(loader, response) {
+														form_inventario.send("ajax/ajaxInventory.php?action=add&type=desktop&folio_id="+folio_id, function(loader, response) {
+														    //console.log("response: "+response);	
 															var objJSON = eval("(function(){return " + response + ";})()");
 															if(objJSON.return == "1"){
 																isTabinventoryOpen = false;																
@@ -628,9 +629,27 @@
 										if(objJSON.return == "1"){
 											//isTabinventoryOpen = true;											
 											folio_id = objJSON.data.folio_id;
-											//stocktaking[2].list[0].url = "ajax/upload_images.php?folio_id="+folio_id;																                                         
-											dhtmlx.message({id:"msg_save_IPAD",text: "Registro almacenado correctamente con el folio "+ folio_id,expire: -1})
-                                            //formfolio.clear();											
+											var result_inventory = dhtmlxAjax.getSync("ajax/ajaxInventory.php?action=add&type=ipad&folio_id="+folio_id);	
+											result_inventory = result_inventory.xmlDoc.responseText;
+											console.log("result_inventory " +result_inventory);
+											
+											if (result_inventory == "entramos1"){
+												//alert(result_inventory);																							                                         
+												dhtmlx.message({id:"msg_save_IPAD",
+																text: "Registro almacenado correctamente con el folio "+ folio_id,
+																expire: -1
+												})
+												formfolio.clear();											
+											} else {
+												
+												dhtmlx.message({
+													id:"msg_save_IPAD_error",
+													type:"error",
+													text: "Ocurrio un error al guardar el inventario",
+													expire: 2000
+												})
+												//console.log("erro:"+response);													
+											}
 										}else{
 											//console.log(response);
 											alert("error:"+response);									

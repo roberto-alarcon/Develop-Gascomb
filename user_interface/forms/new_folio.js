@@ -34,8 +34,8 @@ var new_folio = [
 					{text: "--", value: "", selected:true}
 			]},			
 			{type: "input",  name:"year", labelWidth:120,label: "Año:",validate: "NotEmpty"},
-			{type: "input",  name:"cilinders", labelWidth:120,label: "Cilindros:", validate: "NotEmpty"},
-			{type: "input",  name:"km", labelWidth:120,label: "Kms:", validate: "NotEmpty"},
+			{type: "input",  name:"cilinders", labelWidth:120,label: "Cilindros:"},
+			{type: "input",  name:"km", labelWidth:120,label: "Kms:"},
 			{type: "select", name:"fuel", label: "Combustible:", position:"label-left",labelWidth:120, options:[
 								{text: "Gasolina", value: "Gasolina", selected:true},
 								{text: "Diesel", value: "Diesel"}

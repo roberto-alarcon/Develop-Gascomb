@@ -9,19 +9,24 @@ include_once PATH_CLASSES_FOLDER.'class.vehicles.php';
 global $Gascomb;
 	
 	$folio_id = $_REQUEST['folio_id'];
+	$type = $_REQUEST['type'];
+
 	//obtener valores de inventarios
-	
-	foreach($_REQUEST as $key => $value){
-		if($value == "1"){
-			if($key !== "files_count"){
-				//$inventorydata[$key] = strtoupper($value);
-				$inventorydata[$key] = strtr(strtoupper($value),"àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ");
+	if ($type != "ipad"){
+
+		foreach($_REQUEST as $key => $value){
+			if($value == "1"){
+				if($key !== "files_count"){
+					//$inventorydata[$key] = strtoupper($value);
+					$inventorydata[$key] = strtr(strtoupper($value),"àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ");
+				}
 			}
 		}
-	}
-
-	$inventorydata["observations"] = strtoupper(utf8_decode($_REQUEST['observations']));
-	$inventorydata["fuel_level"] = $_REQUEST['fuel_level'];
+	
+		$inventorydata["observations"] = strtoupper(utf8_decode($_REQUEST['observations']));
+		$inventorydata["fuel_level"] = $_REQUEST['fuel_level'];
+	} 
+	
   	if(isset($_REQUEST['action']) && $_REQUEST['action'] == 'add'){
 	
 		$folio = new Folio;		
@@ -29,8 +34,10 @@ global $Gascomb;
 	
 		//Add inventory to db
   		$Inventory = new Inventory;		
-  		$Inventory = $Inventory->add($inventorydata); 
-
+  		if ($type != "ipad"){
+			
+			$Inventory = $Inventory->add($inventorydata);
+			
 		//add images to db
 			for($i = 0; $i <=$_REQUEST["files_count"]-1;$i++){
 				$image = $_REQUEST["files_s_".$i];
@@ -38,12 +45,20 @@ global $Gascomb;
 				$image_data["image_name"] = $image;
 				$image = new Image;
 				$image->add($image_data);
-			}
+			}				
+	
+  		} else {
+			#$Inventory->addData();
+			$Inventory = $Inventory->addAutomatic();				
+		}
+        
+		#echo "<pre>"; print_r($Inventory); echo "</pre>"; die();
+		
 		//Actualizar inventory_id en Folios
 		$id_inv["inventory_id"] = $Inventory["inventory_id"];
 		$folio_idd = array("folio_id"=>$folio_id);
 		$folio->updatewhere = $folio_idd;
-		$id_inv["inventory_id"] = $Inventory["inventory_id"];
+		//$id_inv["inventory_id"] = $Inventory["inventory_id"];
 		$folio->update($id_inv);
 		
 		$vehicles = new Vehicle;		
@@ -65,7 +80,15 @@ global $Gascomb;
 		$Gascomb->doAlert();*/
 		
 		include_once "generatepdf.php";
-		echo  '{"return":"1","data":['.json_encode($Inventory).']}';	
+		if ($type != 'ipad'){
+		   echo  '{"return":"1","data":['.json_encode($Inventory).']}';	
+		} else {
+			if (is_array($Inventory)){
+				echo "1";	
+			} else {
+				echo "0";
+			}	
+		}  
 		
 
   	}
