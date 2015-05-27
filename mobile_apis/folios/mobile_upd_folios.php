@@ -4,7 +4,7 @@ include_once '/home/gascomb/secure_html/config/set_variables.php';
 include_once PATH_CLASSES_FOLDER.'class.mobile.folio.php';
 include_once PATH_CLASSES_FOLDER.'class.mobile.vehicles.php';
 
-
+	
     if(empty($_POST)){
 		$results['return'] = 'false';
 		echo json_encode($results);		

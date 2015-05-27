@@ -33,6 +33,8 @@ class Inventory
 	function addAutomatic(){
 
 		$inv = array(
+			"observations" => "",
+			"fuel_level" => "0",
 			"tapon_gasolina" => "1",
 			"llave_tapon_gasolina" => "1",
 			"molduras" => "1", 	
@@ -121,10 +123,7 @@ class Inventory
 			"parte_trasera" => "1",
 			"antena_oficial" => "1",
 			"equipo_radiocomunicacion" => "1",
-			"portafiltro" => "1",
-			"observations" => "",
-			"fuel_level" => "0"
-		
+			"portafiltro" => "1"
 		);		
 	
 		
