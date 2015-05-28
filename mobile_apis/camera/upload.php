@@ -35,7 +35,17 @@ if (!$cli && !(isset($_SERVER['HTTP_X_FILE_NAME']) && isset($_SERVER['CONTENT_LE
 <?php
 }
 
+$files = array();
+foreach ($_FILES['my_field'] as $k => $l) {
+    foreach ($l as $i => $v) {
+        if (!array_key_exists($i, $files))
+            $files[$i] = array();
+        $files[$i][$k] = $v;
+    }
+}
 
+// now we can loop through $files, and feed each element to the class
+foreach ($files as $file) {
 
     // ---------- IMAGE UPLOAD ----------
 
@@ -76,7 +86,7 @@ if (!$cli && !(isset($_SERVER['HTTP_X_FILE_NAME']) && isset($_SERVER['CONTENT_LE
 
 
 
-
+}
 
 if (!$cli && !(isset($_SERVER['HTTP_X_FILE_NAME']) && isset($_SERVER['CONTENT_LENGTH']))) {
 
