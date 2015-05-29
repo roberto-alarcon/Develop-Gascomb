@@ -2,24 +2,25 @@
 //https://sistema.gascomb.com/user_interface/ || http://desarrollo.grupome.com
 //https://sistema.gascomb.com/multimedia/ || http://desarrollo-i2.grupome.com/ 
 // /home/gascomb/secure_html/ || /home/grupome/public_html/dev_controlProcess/
-define("DOMAIN", "https://sistema.gascomb.com/");
-define("PATH_DHTMLX_LIBRARY", "https://sistema.gascomb.com/dhtmlxLibrary/");
-define("PATH_USER_INTERFACE_AJAX", "https://sistema.gascomb.com/ajax/");
-define("PATH_MULTIMEDIA", "http://i2.gascomb.com/");
-define("PATH_MULTIMEDIA_BASE", '/home/gascomb/secure_html/multimedia');
-define("PATH_BASE_FOLDER", '/home/gascomb/secure_html/');
-define("PATH_CLASSES_FOLDER", '/home/gascomb/secure_html/modules/classes/');
-define("URL_MULTIMEDIA","http://i2.gascomb.com/");
+define("DOMAIN", "https://staging.gascomb.com/");
+define("COMPANY", "Staging");
+define("PATH_DHTMLX_LIBRARY", "http://staging.gascomb.com/dhtmlxLibrary/");
+define("PATH_USER_INTERFACE_AJAX", "http://staging.gascomb.com/ajax/");
+define("PATH_MULTIMEDIA", "http://cdn-s.gascomb.com/");
+define("PATH_MULTIMEDIA_BASE", '/home/gascomb/staging_secure_html/Develop-Gascomb/multimedia');
+define("PATH_BASE_FOLDER", '/home/gascomb/staging_secure_html/Develop-Gascomb/');
+define("PATH_CLASSES_FOLDER", '/home/gascomb/staging_secure_html/Develop-Gascomb/modules/classes/');
+define("URL_MULTIMEDIA","http://cdn-s.gascomb.com/");
 define("QR_IMAGE_URL",PATH_MULTIMEDIA."[id_folio]/_qrcode/qrcode.png");
 define("PDF_URL",PATH_MULTIMEDIA."[id_folio]/pdf/[id_folio].pdf");
 define("PATH_IMAGE_INVENTORY", "/multimedia/inventory/");
-define("PATH_SERV", "/home/gascomb/secure_html/");
+define("PATH_SERV", "/home/gascomb/staging_secure_html/Develop-Gascomb/");
 
 
 // BD //
 define("BD_USER", "root");
 define("BD_PASSWORD", "AAKBgQCtNFZpXIDoab00ce0BeVe5Jqjgc+");
-define("BD_DATABASE", "sistema_gascomb");
+define("BD_DATABASE", "sistema_staging");
 define("BD_SERVER", "localhost");
 
 //header && nom
