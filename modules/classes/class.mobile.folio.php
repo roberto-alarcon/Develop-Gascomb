@@ -16,7 +16,7 @@ class FoliosMobiles
 	var $updatewhere = array();
     var $type_capture = "1";
 	var $table = "folios";
-	
+	var $primary = 'folio_id';
 
 
 	function selectAllPending(){ 
@@ -97,6 +97,21 @@ class FoliosMobiles
 			}			
 			return($res);	
     	
+    }	
+	
+	function selectbyId($id){ 
+            $db = new manejaDB();
+			$db->query("select * from ".$this->table." where $this->primary = '".$id."'");
+			$result = $db->getArray();
+			if($result){
+				foreach ($result as $clave => $valor) {
+					if(is_numeric($clave)) { unset($result[$clave]); }		
+				}
+			}else{
+				$result = false;
+			}	
+			$db->desconectar();
+			return($result); 						
     }	
 
 }

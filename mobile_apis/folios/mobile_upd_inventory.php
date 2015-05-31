@@ -3,8 +3,6 @@ include_once '/home/gascomb/secure_html/config/set_variables.php';
 include_once PATH_CLASSES_FOLDER.'class.mobile.folio.php';
 include_once PATH_CLASSES_FOLDER.'class.mobile.inventory.php';
 
-    print_r($_POST);
-
     if(empty($_POST)){
 		$results['return'] = 'false';
 		echo json_encode($results);		
@@ -15,16 +13,15 @@ include_once PATH_CLASSES_FOLDER.'class.mobile.inventory.php';
 		
 		foreach($_POST as $key => $value){
 
-				if($key !== "folio_id" && $key !== "envia"){
-					//$inventorydata[$key] = strtoupper($value);
-					$inventorydata[$key] = strtr(strtoupper($value),"àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ");
-				}
+			if($key !== "folio_id" && $key !== "envia"){
+				//$inventorydata[$key] = strtoupper($value);
+				$inventorydata[$key] = strtr(strtoupper($value),"àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ");
+			}
 			
 		}
 
-		#echo "<pre>"; print_r($inventorydata); echo "</pre>"; die();
-		
-		
+		#echo "<pre>"; print_r($inventorydata); echo "</pre>";
+
 		$folio = new FoliosMobiles;		
 		$folio_inventory = $folio->getIDinventory($folio_id);
 
@@ -32,9 +29,10 @@ include_once PATH_CLASSES_FOLDER.'class.mobile.inventory.php';
 		$Inventory = new InventoryMobiles;		
 		$Inventory = $Inventory->update($inventorydata,$folio_inventory);
 
+
 		if ($Inventory){
 			$results['return'] = 'true';	
-			#echo "id_inventario actualizado en folios ".  $folio_inventory. "<br />";
+			#echo "id_inventario actualizado en folios, inventory y pdf ok ".  $folio_inventory. "<br />";
 			echo json_encode($results);
 		} else {
 			$results['return'] = 'false';	

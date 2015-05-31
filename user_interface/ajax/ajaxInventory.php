@@ -78,10 +78,10 @@ global $Gascomb;
 		$Gascomb->session_folio($folio_id);
 			$Gascomb->folio_id = $Gascomb->session_folio();
 		$Gascomb->doAlert();*/
-		
-		include_once "generatepdf.php";
+				
 		if ($type != 'ipad'){
-		   echo  '{"return":"1","data":['.json_encode($Inventory).']}';	
+		    include_once "generatepdf.php";
+		    echo  '{"return":"1","data":['.json_encode($Inventory).']}';	
 		} else {
 			if (is_array($Inventory)){
 				echo "1";	
