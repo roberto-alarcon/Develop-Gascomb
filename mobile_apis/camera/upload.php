@@ -15,7 +15,6 @@ if ($cli) {
 }
 
 // set variables
-//$dir_dest = '/home/gascomb/secure_html/multimedia/'.$_POST['folio'].'/images/';
 $dir_dest = './';
 $dir_pics = (isset($_GET['pics']) ? $_GET['pics'] : $dir_dest);
 
@@ -35,17 +34,7 @@ if (!$cli && !(isset($_SERVER['HTTP_X_FILE_NAME']) && isset($_SERVER['CONTENT_LE
 <?php
 }
 
-$files = array();
-foreach ($_FILES['my_field'] as $k => $l) {
-    foreach ($l as $i => $v) {
-        if (!array_key_exists($i, $files))
-            $files[$i] = array();
-        $files[$i][$k] = $v;
-    }
-}
 
-// now we can loop through $files, and feed each element to the class
-foreach ($files as $file) {
 
     // ---------- IMAGE UPLOAD ----------
 
@@ -70,7 +59,7 @@ foreach ($files as $file) {
         $handle->image_text_position   = 'BL';
         $handle->image_text_padding_x  = 10;
         $handle->image_text_padding_y  = 2;
-        $handle->file_new_name_body    =time();
+        $handle->file_new_name_body     = $_POST['area'].'_'.time();
 
         $handle->Process($dir_dest);
         $handle-> Clean();
@@ -86,7 +75,7 @@ foreach ($files as $file) {
 
 
 
-}
+
 
 if (!$cli && !(isset($_SERVER['HTTP_X_FILE_NAME']) && isset($_SERVER['CONTENT_LENGTH']))) {
 
