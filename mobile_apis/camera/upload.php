@@ -3,6 +3,9 @@
 print_r($_FILES);
 error_reporting(E_ALL);
 
+// Definiciones
+include_once '/home/gascomb/secure_html/config/set_variables.php';
+
 // we first include the upload class, as we will need it here to deal with the uploaded file
 include_once('class.upload.php');
 
@@ -15,26 +18,8 @@ if ($cli) {
 }
 
 // set variables
-$dir_dest = './';
+$dir_dest = PATH_MULTIMEDIA_BASE.'/'.$_POST['folio'].'/images/';
 $dir_pics = (isset($_GET['pics']) ? $_GET['pics'] : $dir_dest);
-
-if (!$cli && !(isset($_SERVER['HTTP_X_FILE_NAME']) && isset($_SERVER['CONTENT_LENGTH']))) {
-?>
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<meta http-equiv=content-type content="text/html; charset=UTF-8">
-
-
-<body>
-
-    <h1>class.upload.php test forms</h1>
-
-<?php
-}
-
-
 
     // ---------- IMAGE UPLOAD ----------
 
@@ -67,30 +52,11 @@ if (!$cli && !(isset($_SERVER['HTTP_X_FILE_NAME']) && isset($_SERVER['CONTENT_LE
     } else {
         // if we're here, the upload file failed for some reasons
         // i.e. the server didn't receive the file
-        echo '<p class="result">';
-        echo '  <b>File not uploaded on the server</b><br />';
-        echo '  Error: ' . $handle->error . '';
-        echo '</p>';
+        echo "image failed";
+    }else{
+
+        echo "image upload";
+
     }
 
-
-
-
-
-if (!$cli && !(isset($_SERVER['HTTP_X_FILE_NAME']) && isset($_SERVER['CONTENT_LENGTH']))) {
-
-    echo '<p class="result"><a href="index.html">do another test</a></p>';
-
-    if (isset($handle)) {
-        echo '<pre>';
-        echo($handle->log);
-        echo '</pre>';
-    }
-?>
-</body>
-
-</html>
-
-<?php
-}
 ?>
