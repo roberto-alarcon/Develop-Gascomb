@@ -1,6 +1,9 @@
 <?php
-
+error_reporting(-1);
+ini_set('display_errors', '1');
 define("DOMAIN", "http://pts.gascomb.com/");
+define("COMPANY", "PT Service");
+define("NAME_COMPANY", "GRUPO AUTOMOTRIZ EN SERVICIOS DE COMBUSTIBLE");
 define("PATH_DHTMLX_LIBRARY", "http://pts.gascomb.com/dhtmlxLibrary/");
 define("PATH_USER_INTERFACE_AJAX", "http://pts.gascomb.com/ajax/");
 define("PATH_MULTIMEDIA", "http://cnd-pts.gascomb.com/");
