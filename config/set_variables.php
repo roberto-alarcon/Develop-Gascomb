@@ -14,6 +14,8 @@ if ( $_SERVER['SERVER_NAME'] == 'localhost' ){
 	include_once('host/develop.gascomb.com.php');
 }elseif($_SERVER['SERVER_NAME'] == 'localhost'){	
 	include_once('host/localhost.php');
+}elseif($_SERVER['SERVER_NAME'] == 'gascomb.dev'){	
+	include_once('host/gascomb.dev.php');
 }elseif ($_SERVER['SERVER_NAME'] == 'github-develop.gascomb.com') {
 	include_once('host/github-develop.gascomb.com.php');
 }elseif ($_SERVER['SERVER_NAME'] == 'staging.gascomb.com') {

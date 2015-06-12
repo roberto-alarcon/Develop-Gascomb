@@ -2,7 +2,7 @@
 //https://sistema.gascomb.com/user_interface/ || http://desarrollo.grupome.com
 //https://sistema.gascomb.com/multimedia/ || http://desarrollo-i2.grupome.com/ 
 // /home/gascomb/secure_html/ || /home/grupome/public_html/dev_controlProcess/
-define("DOMAIN", "https://staging.gascomb.com/");
+define("DOMAIN", "http://staging.gascomb.com/");
 define("COMPANY", "Staging");
 define("PATH_DHTMLX_LIBRARY", "http://staging.gascomb.com/dhtmlxLibrary/");
 define("PATH_USER_INTERFACE_AJAX", "http://staging.gascomb.com/ajax/");
