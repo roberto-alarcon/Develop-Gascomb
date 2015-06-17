@@ -20,7 +20,7 @@ if(isset($folios_mobile) && $folios_mobile != null && count($folios_mobile) > 0)
 		}
 		
 		$dependency = $folio_mobile->getDependency($valor['dependency_id'],$c);
-		$qrcode = $folio_mobile->getUrlqrcode($valor["folio_id"]);
+		$qrcode = $folio_mobile->getUrlqrcode($valor["folio_id"],$c);
 		
 		$pad_pending[$clave]['folio'] = $valor["folio_id"];
 		$pad_pending[$clave]['url_qrcode'] = $qrcode;

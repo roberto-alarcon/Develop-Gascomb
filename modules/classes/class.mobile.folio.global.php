@@ -85,10 +85,14 @@ class FoliosMobiles
     	
     }	
 	
-    public function getUrlqrcode( $folio ){
-
-		$url = "http://develop.gascomb.com/multimedia/".$folio."/_qrcode/qrcode.png";
-		$fp = curl_init($url);
+    public function getUrlqrcode( $folio, $c ){
+        if($c == 1){
+			$url = "http://develop.gascomb.com/multimedia/";
+		}else if($c == 2){
+			$url = "http://cdn-p.gascomb.com/";
+		}
+		$urls = $url . $folio . "/_qrcode/qrcode.png";
+		$fp = curl_init($urls);
 		$ret = curl_setopt($fp, CURLOPT_RETURNTRANSFER, 1);
 		$ret = curl_setopt($fp, CURLOPT_TIMEOUT, 30);
 		$ret = curl_exec($fp);
@@ -98,7 +102,7 @@ class FoliosMobiles
 		if($info == 404){
 			$result = "";
 		}else{
-			$result = $url;
+			$result = $urls;
 		}
 		return($result);
     	
