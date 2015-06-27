@@ -4,6 +4,7 @@
 *
 * @access public 
 * @since 27/03/2003 10:00:00 p.m. 
+* @modify 27/06/2015 12:54 p.m.
 **************************************************************/
 include_once 'class.mobile.folio.control.config.global.php';
 include_once 'mobile_manejaDB.php';

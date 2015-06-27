@@ -1,4 +1,7 @@
 <?php
+/**************************************************************
+* Config control mobile global
+**************************************************************/
 	error_reporting(-1);
 	define("BD_USER_GASCOMB", "root");
 	define("BD_PASSWORD_GASCOMB", "AAKBgQCtNFZpXIDoab00ce0BeVe5Jqjgc+");

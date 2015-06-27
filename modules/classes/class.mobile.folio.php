@@ -4,6 +4,7 @@
 *
 * @access public 
 * @since 27/03/2003 10:00:00 p.m. 
+* @modify 27/06/2015 12:54 p.m.
 **************************************************************/
 include_once 'class.mobile.folio.control.config.php';
 include_once 'manejaDB.php';
@@ -16,8 +17,8 @@ class FoliosMobiles
 	var $updatewhere = array();
     var $type_capture = "1";
 	var $table = "folios";
-	var $primary = 'folio_id';
-
+	var $primary = "folio_id";
+	
 
 	function selectAllPending(){ 
             $db = new manejaDB(BD_STOCK_USER,BD_STOCK_PASSWORD,BD_STOCK_DATABASE,BD_STOCK_SERVER);

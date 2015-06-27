@@ -1,4 +1,8 @@
 <?php
+/**************************************************************
+* Control DB  mobile
+* @ modify 27/06/2015
+**************************************************************/
 error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 include_once 'class.mobile.folio.control.config.global.php';
 class manejaDB

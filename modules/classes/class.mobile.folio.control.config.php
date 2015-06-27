@@ -1,5 +1,7 @@
 <?php 
-
+/**************************************************************
+* Config control mobile
+**************************************************************/
 define("BD_STOCK_USER", "root");
 define("BD_STOCK_PASSWORD", "");
 define("BD_STOCK_DATABASE", "");
