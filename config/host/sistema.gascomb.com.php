@@ -6,6 +6,7 @@ define("DOMAIN", "https://sistema.gascomb.com/");
 define("COMPANY", "Gascomb");
 define("PATH_DHTMLX_LIBRARY", "https://sistema.gascomb.com/dhtmlxLibrary/");
 define("PATH_USER_INTERFACE_AJAX", "https://sistema.gascomb.com/ajax/");
+define("PATH_USER_INTERFACE_AJAX_PDF", "/home/gascomb/secure_html/Develop-Gascomb/user_interface/ajax/");
 define("PATH_MULTIMEDIA", "http://i2.gascomb.com/");
 define("PATH_MULTIMEDIA_BASE", '/home/gascomb/secure_html/multimedia');
 define("PATH_BASE_FOLDER", '/home/gascomb/secure_html/Develop-Gascomb/');

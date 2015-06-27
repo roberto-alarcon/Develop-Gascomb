@@ -6,6 +6,7 @@ define("DOMAIN", "http://staging.gascomb.com/");
 define("COMPANY", "Staging");
 define("PATH_DHTMLX_LIBRARY", "http://staging.gascomb.com/dhtmlxLibrary/");
 define("PATH_USER_INTERFACE_AJAX", "http://staging.gascomb.com/ajax/");
+define("PATH_USER_INTERFACE_AJAX_PDF", "/home/gascomb/staging_secure_html/Develop-Gascomb/user_interface/ajax/");
 define("PATH_MULTIMEDIA", "http://cdn-s.gascomb.com/");
 define("PATH_MULTIMEDIA_BASE", '/home/gascomb/staging_secure_html/Develop-Gascomb/multimedia');
 define("PATH_BASE_FOLDER", '/home/gascomb/staging_secure_html/Develop-Gascomb/');
