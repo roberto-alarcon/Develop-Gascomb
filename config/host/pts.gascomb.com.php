@@ -7,7 +7,7 @@ define("NAME_COMPANY", "GRUPO AUTOMOTRIZ EN SERVICIOS DE COMBUSTIBLE");
 define("PATH_DHTMLX_LIBRARY", "http://pts.gascomb.com/dhtmlxLibrary/");
 define("PATH_USER_INTERFACE_AJAX", "http://pts.gascomb.com/ajax/");
 define("PATH_USER_INTERFACE_AJAX_PDF", "/home/gascomb/pts_secure_html/Develop-Gascomb/user_interface/ajax/");
-define("PATH_MULTIMEDIA", "http://cnd-pts.gascomb.com/");
+define("PATH_MULTIMEDIA", "http://cnd-p.gascomb.com/");
 define("PATH_MULTIMEDIA_BASE", '/home/gascomb/pts_secure_html/multimedia');
 define("PATH_BASE_FOLDER", '/home/gascomb/pts_secure_html/Develop-Gascomb/');
 define("PATH_CLASSES_FOLDER", '/home/gascomb/pts_secure_html/Develop-Gascomb/modules/classes/');
