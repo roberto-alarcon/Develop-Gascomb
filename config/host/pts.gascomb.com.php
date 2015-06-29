@@ -3,7 +3,7 @@ error_reporting(-1);
 ini_set('display_errors', '1');
 define("DOMAIN", "http://pts.gascomb.com/");
 define("COMPANY", "Professional Technician Services S.A. de C.V.");
-define("NAME_COMPANY", "Professional Technician Services S.A. de C.V.");
+define("NAME_COMPANY", "Professional Technician Services");
 define("PATH_DHTMLX_LIBRARY", "http://pts.gascomb.com/dhtmlxLibrary/");
 define("PATH_USER_INTERFACE_AJAX", "http://pts.gascomb.com/ajax/");
 define("PATH_USER_INTERFACE_AJAX_PDF", "/home/gascomb/pts_secure_html/Develop-Gascomb/user_interface/ajax/");
