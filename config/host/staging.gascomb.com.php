@@ -4,6 +4,7 @@
 // /home/gascomb/secure_html/ || /home/grupome/public_html/dev_controlProcess/
 define("DOMAIN", "http://staging.gascomb.com/");
 define("COMPANY", "Staging");
+define("NAME_COMPANY", "GRUPO AUTOMOTRIZ EN SERVICIOS DE COMBUSTIBLE");
 define("PATH_DHTMLX_LIBRARY", "http://staging.gascomb.com/dhtmlxLibrary/");
 define("PATH_USER_INTERFACE_AJAX", "http://staging.gascomb.com/ajax/");
 define("PATH_USER_INTERFACE_AJAX_PDF", "/home/gascomb/staging_secure_html/Develop-Gascomb/user_interface/ajax/");
