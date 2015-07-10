@@ -335,7 +335,7 @@ AL RECIBIR EL
   <tr style="background: #DDD; height: 22px;">
     <td colspan="4" style="height: 22px;"><p>NOMBRE RESPONSABLE DE LA UNIDAD:<br> <?php echo utf8_encode($folio_data["vehicle_operator"]); ?></p></td>
     <td colspan="6" style="height: 22px;"><p>TELEFONO OPERADOR: <br> <?php echo $folio_data["operator_tel"]; ?></p></td>
-    <td colspan="5" style="height: 22px;"><p>COMBUSTIBLE: <?php echo $vehicle["fuel"]; ?><br> NIVEL DE COMBUSTIBLE: <?php echo getFuelLevel($Inventory["fuel_level"]); ?></p></td>
+    <td colspan="5" style="height: 22px;"><p>COMBUSTIBLE: <?php echo $vehicle["fuel"]; ?><br> NIVEL DE COMBUSTIBLE: <?php echo getFuelLevel($Inventorys["fuel_level"]); ?></p></td>
   </tr>
   <tr style="background:#EDEDED">
     <td style="width:15%;"><p>PIEZA</p></td>
@@ -356,15 +356,15 @@ AL RECIBIR EL
   </tr>
   <?php 
   //Extraemos las observaciones antes de mostrar inventario
-	if(isset($Inventory["observations"]) &&  $Inventory["observations"]!== ""){
-		$observaciones = (isset($ismobile) && $ismobile == true) ? $Inventory["observations"] : utf8_encode($Inventory["observations"]);
+	if(isset($Inventorys["observations"]) &&  $Inventorys["observations"]!== ""){
+		$observaciones = (isset($ismobile) && $ismobile == true) ? $Inventorys["observations"] : utf8_encode($Inventorys["observations"]);
 	}else{
 		$observaciones ="";
 		}
 	
   //eliminamos las observaciones y nivel de gasolina antes de mostrar inventario
-  unset($Inventory["observations"]);unset($Inventory["fuel_level"]);
-  $keys = array_keys($Inventory);
+  unset($Inventorys["observations"]);unset($Inventorys["fuel_level"]);
+  $keys = array_keys($Inventorys);
 		  $filas = 18; $columnas = 5; $contador = 1;		  
 
 
@@ -385,7 +385,7 @@ AL RECIBIR EL
 			}else{
 				$value = $keys[$contador];
 				echo "<td style='width:15%;height: 8px;'><p>".ucfirst(str_replace('_', ' ', $keys[$contador]))."</p></td>";
-					if($Inventory[$value] == "1"){
+					if($Inventorys[$value] == "1"){
 						echo "<td style='width:2.5%;height: 8px;'><img src='http://develop.gascomb.com/user_interface/img/chekbox_true.png'></td><td style='width:2.5%;height: 8px;'>&nbsp;</td>";
 					}else{
 						echo "<td style='width:2.5%;height: 8px;'>&nbsp;</td><td style='width:2.5%;height: 8px;'><img src='http://develop.gascomb.com/user_interface/img/chekbox_false.png'></td>";
