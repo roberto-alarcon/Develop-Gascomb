@@ -16,6 +16,7 @@ class manejaDB extends Watchful
     var $_query;
     var $_mensaje;
 	var $numRows;
+	var $affectedRows;
 
     function manejaDB()
     {
@@ -105,9 +106,10 @@ class manejaDB extends Watchful
 	**************************************************************/
 
     function query($sql){
+		$this->affectedRows = 0;
         if ($this->_query=mysql_query($sql,$this->_conexion)){
-			
-          	return $this->_query;
+          	$this->affectedRows=$this->filasAfectadas();
+			return $this->_query;
         }else{
             $this->mensaje(mysql_error($this->_conexion)); // Error 3. No se pudo ejecutar la consulta
             return false;
@@ -288,7 +290,7 @@ class manejaDB extends Watchful
 		$datos_where
 		";
 		
-		if($this->query($sql)){
+		if($this->query($sql) && $this->affectedRows > 0){
 			return true;
 		}else{
 			return false;
@@ -296,10 +298,9 @@ class manejaDB extends Watchful
 		#return $sql;
 		
 		
-		
-		
 	}
 	
+
 		
 }
 ?>
