@@ -111,8 +111,7 @@ class Folio
 			$result = $db->getArrayAsoc();						
 			$db->desconectar();
 			return($result);
-    }
-	
+    }	
 	function selectbyColumn($where, $limit){
 			$limit = isset($limit) ? $limit : 10;			
 			if($where){
@@ -139,6 +138,14 @@ class Folio
 			$db->desconectar();
 			return($result);
     }
+	function getActivesFoliosActivities($limit){			
+	        $limit = ($limit)? $limit : 10;
+            $db = new manejaDB();			
+			$db->query("select * from ".$this->table." where support_status_id !='8' and support_status_id !='9' and user_id = " .$_SESSION['active_user_id']. " order by $this->primary DESC limit $limit");
+			$result = $db->getArrayAsoc();						
+			$db->desconectar();
+			return($result);
+    }	
 
 	//Valida los parametros de entrada para insert
 	function validateinsert(){

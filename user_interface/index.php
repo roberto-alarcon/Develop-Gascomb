@@ -8,6 +8,7 @@
   	$session_result = "var secure = true;";
   }
   
+    
   $session_group = ( isset ( $_SESSION['active_user_group'] ) ) ? $_SESSION['active_user_group'] : 1;
 // Include configuration 
 

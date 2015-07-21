@@ -13,10 +13,10 @@ function viewAgregarActividades(){
 	var grid = cell_3.attachGrid();
 	grid.setHeader("Folio, Placa, Dependencia,Fecha de Ingreso");
 	grid.setImagePath("./dhtmlxLibrary/dhtmlxGrid/codebase/imgs/");						
-	grid.setInitWidths("80,80,200,350,*");
+	grid.setInitWidths("80,100,400,110");
 	grid.setColTypes("dyn,ed,ed,txt");
 	grid.enableMultiline(true);
-	grid.loadXML("ajax/grids/grid_folios.php");
+	grid.loadXML("ajax/grids/grid_folios_actividades.php");
 	grid.init();
 
 	grid.attachEvent("onRowSelect", function(id,cInd){
