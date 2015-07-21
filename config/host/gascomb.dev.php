@@ -1,7 +1,4 @@
 <?php
-//https://sistema.gascomb.com/user_interface/ || http://desarrollo.grupome.com
-//https://sistema.gascomb.com/multimedia/ || http://desarrollo-i2.grupome.com/ 
-// /home/gascomb/secure_html/ || /home/grupome/public_html/dev_controlProcess/
 define("DOMAIN", "http://gascomb.dev/");
 define("COMPANY", "Local Host");
 define("PATH_DHTMLX_LIBRARY", "http://gascomb.dev/dhtmlxLibrary/");
@@ -34,5 +31,7 @@ define("HEADER-PDF", $headerpdf);
 // Variables Ampliaciones				
 define("A_RECEIVER", "l._.m@hotmail.com");			
 define("A_SENDER", "Gascomb <gascomb@gascomb.com>");			
-define("A_SUBJECT", "Ampliación de servicios");			
+define("A_SUBJECT", "Ampliación de servicios");	
+
+date_default_timezone_set('America/Mexico_City');		
 ?>

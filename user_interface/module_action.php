@@ -54,9 +54,16 @@ switch(id){
 		viewPreventivo();
 		buffer_toolbar.disableItem('new');
 		break;
+
 	case 'requisiciones':
 	  document.getElementById('a_tabbar').innerHTML = '';
 	  viewAdminRequisiciones();
+	  buffer_toolbar.disableItem('new');
+	  break;
+
+	case 'tareas':
+	  document.getElementById('a_tabbar').innerHTML = '';
+	  viewAgregarActividades();
 	  buffer_toolbar.disableItem('new');
 	  break;
 

@@ -118,6 +118,7 @@
 	<script src="./js_views/viewAdminImages.js?cache=<?php echo time();?>"></script>
 	<script src="./js_views/viewAdminRequisiciones.js?cache=<?php echo time();?>"></script>
 	<script src="./js_views/viewAdminContratos.js?cache=<?php echo time();?>"></script>
+	<script src="./js_views/viewAgregarActividades.js?cache=<?php echo time();?>"></script>
 	
 	<style>
 		html, body {
@@ -2624,7 +2625,7 @@
 					var session_group = <?php echo $session_group; ?>;
 					var toolbar = new dhtmlXToolbarObject("toolbarObj");
 					toolbar.setIconsPath("./menu/imgs/");
-					toolbar.loadXML("./menu/toolbar.xml?123",function(){
+					toolbar.loadXML("./menu/toolbar.xml?12345",function(){
 						
 						if( session_group == 1 ){
 							toolbar.removeItem('vistas');

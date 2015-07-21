@@ -5,6 +5,7 @@
 	</item>
 	<item id="vistas" type="buttonSelect" img="selection.gif" imgdis="selection.gif" text="Vistas">
 		<item type="button"	id="sistema"	 text="Panel Sistema"       />
+		<item type="button"	id="tareas" text="Asignar tareas" />
 		<item type="button"	id="requisiciones" text="Panel Requisiciones" />
 		<item type="button"	id="inventarios" text="Control de inventarios" />
 		<!--item type="button"	id="preventivo" text="Panel Preventivo" /-->
