@@ -10,6 +10,7 @@ global $Gascomb;
 	
 	$folio_id = $_REQUEST['folio_id'];
 	$type = $_REQUEST['type'];
+	$pdf_status = false;
 
 	//obtener valores de inventarios
 	if ($type != "ipad"){
@@ -53,8 +54,7 @@ global $Gascomb;
 		}
         
 		#echo "<pre>"; print_r($Inventory); echo "</pre>"; die();
-		
-		//Actualizar inventory_id en Folios
+		//Update inventory_id in Folios
 		$id_inv["inventory_id"] = $Inventory["inventory_id"];
 		$folio_idd = array("folio_id"=>$folio_id);
 		$folio->updatewhere = $folio_idd;
@@ -81,7 +81,14 @@ global $Gascomb;
 				
 		if ($type != 'ipad'){
 		    include_once "generatepdf.php";
-		    echo  '{"return":"1","data":['.json_encode($Inventory).']}';	
+		    if($pdf_status && is_array($Inventory)){
+			   //echo json_encode($results);
+			   //echo '{"return":"1","data":['.json_encode($Inventory).']}';	
+			   echo "1";
+			}else{
+			   echo "0";
+			}
+			//echo  '{"return":"1","data":['.json_encode($Inventory).']}';	
 		} else {
 			if (is_array($Inventory)){
 				echo "1";	
