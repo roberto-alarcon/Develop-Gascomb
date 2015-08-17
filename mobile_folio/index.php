@@ -52,7 +52,7 @@ session_start();
 								<input type="text" name="txtuser" id="txtuser" value="" placeholder="Name"  />
 					</li>
 					<li data-role="fieldcontain">
-						<label for="txtpassword">ContraseÃ±a:</label>
+						<label for="txtpassword">Contraseña:</label>
 						<input type="password" name="txtpassword" id="txtpassword" value="" placeholder="Password" />
 					</li>
 					<input type="button" value="Login"data-theme="b" id="btnLogin">
@@ -66,7 +66,7 @@ session_start();
 				<h1>Error</h1>
 			</header>
 			<article data-role="content">
-				<p>Usuario o contraseÃ±a no valida</p>
+				<p>Usuario o contraseña no valida</p>
 				<a href="#" data-role="button" data-theme="b" data-rel="back">Aceptar</a>
 			</article>
 		</section>

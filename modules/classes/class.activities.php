@@ -182,7 +182,6 @@ class FloorActivity
 				$text_model .= ";";
 		//$text_model.= '}
 		//];';
-		
 		echo $text_model;
 		
 	}
@@ -399,7 +398,7 @@ class FloorActivity
 	function getstart_date($id){
 		$db = new manejaDB();
 		//$db->query("SELECT * from sistema_gascomb.floor_activities where folio_id = '".$id."' limit 1");
-		$db->query("SELECT * from sistema_gascomb.floor_activities where folio_id = '".$id."' and time_start IS NOT NULL order by time_start ASC");
+		$db->query("SELECT * from ".$this->table." where folio_id = '".$id."' and time_start IS NOT NULL order by time_start ASC");
 		
 		//$result = $db->getArray();
 		$result = $db->getArrayAsoc();

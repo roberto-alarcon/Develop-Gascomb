@@ -153,6 +153,7 @@ $activity = new FloorActivity;
 				$date["1"] = ($date["1"])-1;
 				$date = implode(",",$date);
 			}
+
 		?>
 		scheduler.init('scheduler_here',new Date(<?php echo $date; ?>),"timeline");//2009,5,30
 		//scheduler.load("events.xml");

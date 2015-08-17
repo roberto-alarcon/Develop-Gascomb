@@ -104,7 +104,7 @@
 			
 		</div>
 		<div data-role="content">
-			<iframe style="width:100%;border:none;" height="480px" src="https://sistema.gascomb.com/ajax/gantt/gantt_demo.php?tab_height=<?php echo $tab_height;?>&folio=<?php echo $id;?>"></iframe>
+			<iframe style="width:100%;border:none;" height="480px" src="<?php echo DOMAIN; ?>ajax/gantt/gantt_demo.php?tab_height=<?php echo $tab_height;?>&folio=<?php echo $id;?>"></iframe>
 		</div>
 		<?php  include "footer.php";?>
 		</div>  

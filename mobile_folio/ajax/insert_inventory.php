@@ -72,7 +72,7 @@ global $Gascomb;
 		
 		//Pintamos el folio
 		//echo '<h1>Se a insertado el folio '.$$folio_id.' correctamente</h1>';
-		header('location:http://i2.gascomb.com/'.$folio_id.'/pdf/'.$folio_id.'.pdf');
+		header('location:'.PATH_MULTIMEDIA.$folio_id.'/pdf/'.$folio_id.'.pdf');
 		
   	}
   	
