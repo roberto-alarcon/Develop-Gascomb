@@ -3,7 +3,7 @@ define("DOMAIN", "http://gascomb.dev/");
 define("COMPANY", "Local Host");
 define("PATH_DHTMLX_LIBRARY", "http://gascomb.dev/dhtmlxLibrary/");
 define("PATH_USER_INTERFACE_AJAX", "http://gascomb.dev/ajax/");
-define("PATH_MULTIMEDIA", "http://cdn-l.gascomb.com/");
+define("PATH_MULTIMEDIA", "http://cdn-d.gascomb.com/");
 define("PATH_MULTIMEDIA_BASE", '/Users/ralarcon/Sites/Gascomb_html/multimedia');
 define("PATH_BASE_FOLDER", '/Users/ralarcon/Sites/Gascomb_html/Develop-Gascomb');
 define("PATH_CLASSES_FOLDER", '/Users/ralarcon/Sites/Gascomb_html/Develop-Gascomb/modules/classes/');
