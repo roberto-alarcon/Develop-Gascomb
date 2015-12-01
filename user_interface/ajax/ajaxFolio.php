@@ -97,6 +97,14 @@ global $Gascomb;
 				
 		$folio = new Folio;		
 		$folio = $folio->add($folio_data);
+		$datosActivities = array();
+		$datosActivities["folio_id"] = $folio["folio_id"];
+		$datosActivities["requisicion_id"] = "";
+		$datosActivities["status"] = "0";
+		$datosActivities["user_id"] = $folio["user_id"];
+		
+		$folio2 = new Folio;	
+		$nActivity = $folio2->addActivities($datosActivities);
 		
 		$creado = new statusCreation($folio['folio_id']);		
 		$Gascomb->createStatus($creado);

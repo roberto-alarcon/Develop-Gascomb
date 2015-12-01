@@ -590,23 +590,28 @@
 														dhtmlx.message({id:"msg_save_inv",text: "Guardando informacion del Inventario y generando formato PDF...",expire: -1})
 														
 														form_inventario.send("ajax/ajaxInventory.php?action=add&type=desktop&folio_id="+folio_id, function(loader, response) {
-														    //console.log("response: "+response);	
-															var objJSON = eval("(function(){return " + response + ";})()");
-															if(objJSON.return == "1"){
+															
+															//console.log("mi respuesta es "+response);	
+															//var objJSON = eval("(function(){return " + response + ";})()");
+															/*if(objJSON.return == "1"){*/
+															
+															if (response == "entramos1"){
+																console.log("si fue 1");
 																isTabinventoryOpen = false;																
 																dhtmlx.message.hide("msg_save_inv");								
 																var urlpdf = "<?php echo PATH_MULTIMEDIA; ?>"+folio_id+"/pdf/"+folio_id+".pdf";
 																dhxAccord.cells("a3").attachURL(urlpdf);
 																dhxAccord.cells("a3").open();
 															}else{
+																console.log("no fue 1");
 																dhtmlx.message({
 																	id:"msg_save_inv_err",
 																	type:"error",
 																	text: "Ocurrio un error al guardar",
 																	expire: 2000
 																})
-																console.log("erro:"+response);							
-															}								
+																console.log("error:"+response);							
+															}							
 														});
 													}					
 													
@@ -638,7 +643,7 @@
 											if (result_inventory == "entramos1"){
 												//alert(result_inventory);																							                                         
 												dhtmlx.message({id:"msg_save_IPAD",
-																text: "Registro almacenado correctamente con el folio "+ folio_id,
+																text: "Registro IPAD almacenado correctamente con el folio "+ folio_id,
 																expire: -1
 												})
 												formfolio.clear();											

@@ -17,6 +17,7 @@ class Folio
 	var $updatewhere = array("folio_id"=>"9");
 	var $table = 'folios';
 	var $primary = 'folio_id';
+	var $tableActivities = 'ctract_folios';
 	
 	
 	/* Metodo insert: inserta un nuevo usuario*/
@@ -31,6 +32,14 @@ class Folio
 				echo $db->mensaje();
 			}			
     }
+	function addActivities($data){
+			if (is_array($data)){
+				$db = new manejaDB();			
+				if($id = $db->makeQueryInsert($this->tableActivities,$data)){
+        		  return $id;
+				}				
+			}			
+    }	
 	function update($data){
 			if (is_array($data)){
 				$db = new manejaDB();			

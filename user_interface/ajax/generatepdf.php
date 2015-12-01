@@ -454,6 +454,7 @@ AL RECIBIR EL
 				mkdir("$directorypdf", 0755,true);		// Create directory if it does not exist
 			}
 		$html2pdf->Output($filepdf, 'F');
+	    $pdf_status = true;
     }
     catch(HTML2PDF_exception $e) {
         echo $e;
